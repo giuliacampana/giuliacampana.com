@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
+import Menu from '../menu/Menu';
+
 const centeredStyles = css`
   align-items: center;
   display: flex;
@@ -90,21 +92,6 @@ const Title = styled.div`
   letter-spacing: 2px;
 `;
 
-const Menu = styled.div`
-  color: #fff;
-  display: flex;
-  font-size: 14px; 
-  margin-bottom: 150px;
-`;
-
-const MenuItem = styled.span`
-  margin-right: 10px;
-`;
-
-const Slash = styled.span`
-  margin-right: 10px;
-`;
-
 const IntroPage = () => {
   const [curtainDropped, dropCurtain] = useState(false);
   useEffect(() => {
@@ -120,13 +107,7 @@ const IntroPage = () => {
                 <CurtainName>Giulia Campana</CurtainName>
                 <Title>Developer and Artist</Title>
               </NameAndTitleWrapper>
-              <Menu>
-                <MenuItem>Projects</MenuItem>
-                <Slash>/</Slash>
-                <MenuItem>Arts</MenuItem>
-                <Slash>/</Slash>
-                <MenuItem>About</MenuItem>
-              </Menu>
+              <Menu bottomMargin />
             </Curtain>
           )
           : (

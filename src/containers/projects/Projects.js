@@ -2,8 +2,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import HeaderMenu from '../menu/HeaderMenu';
+
+const OuterWrapper = styled.div`
+  background-color: #a484b3;
+`;
+
 const Projects = () => (
-  <div>Projects</div>
+  <OuterWrapper>
+    <HeaderMenu />
+  </OuterWrapper>
 );
 
 export default Projects;
