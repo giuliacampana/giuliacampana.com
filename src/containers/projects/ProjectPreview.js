@@ -47,7 +47,9 @@ type Props = {
 const ProjectPreview = ({ project } :Props) => (
   <ProjectCard>
     <ProjectTitle>{ project.title }</ProjectTitle>
-    <ProjectSubtitle>{ project.subtitle }</ProjectSubtitle>
+    <ProjectSubtitle>
+      <div>{ project.subtitle } • { project.years}</div>
+    </ProjectSubtitle>
     <ProjectBlurb>{ project.blurb }</ProjectBlurb>
     <LearnMoreButton>Learn more</LearnMoreButton>
   </ProjectCard>
